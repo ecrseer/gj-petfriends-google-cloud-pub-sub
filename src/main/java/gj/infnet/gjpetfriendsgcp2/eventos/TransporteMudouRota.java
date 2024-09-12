@@ -17,4 +17,8 @@ public class TransporteMudouRota implements IEventoDominio {
     private Date quando;
 
 
+    @Override
+    public Date getDataMudou() {
+        return this.quando;
+    }
 }
