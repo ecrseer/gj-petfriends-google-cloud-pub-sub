@@ -8,7 +8,7 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-public class TransporteMudouRota {
+public class TransporteMudouRota implements IEventoDominio {
 
     private Long idTransporte;
     private Pedido pedido;
