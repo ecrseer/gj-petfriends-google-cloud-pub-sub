@@ -36,7 +36,7 @@ public class TransporteMessageService {
             @Qualifier("inputMessageChannel") MessageChannel messageChannel, PubSubTemplate pubSubTemplate) {
 
         pubSubTemplate.setMessageConverter(jacksonPubSubMessageConverter());
-        PubSubInboundChannelAdapter adapter = new PubSubInboundChannelAdapter(pubSubTemplate, "filas-sub");
+        PubSubInboundChannelAdapter adapter = new PubSubInboundChannelAdapter(pubSubTemplate, "pedido-encomendado-topico-gcp-filas-sub");
         adapter.setOutputChannel(messageChannel);
         adapter.setAckMode(AckMode.MANUAL);
         adapter.setPayloadType(Transporte.class);
